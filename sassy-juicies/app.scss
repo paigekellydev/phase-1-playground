@@ -1,0 +1,36 @@
+// do not touch app.css or app.css the npx sss -- watch
+// create your own utility css with sass
+// browser doesn't read scss so it needs to convert
+// css is scss but scss is not scss
+// app.css could be changed to app.scss
+// scss - super css
+// scss has much greater functionality than css
+// scss includes all on css and includes some, can do more things
+// because the browser does not read scss it needs to be compiled into css
+// sass is the same thing as scss but without {}
+// was a failed attempt at creating scss that was less noisy (easier syntax)
+// most people still prefer scss
+
+$base-margin: 2rem; // $ create one value 
+
+@mixin flex-no-list { // @ entire set of properties
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+ul {
+    @include flex-no-list;
+
+    .card {
+        margin: $base-margin;   //$ is value for property, save this 
+
+        &:hover {
+            transform: scale3d(1.3, 1.3, 1.3);
+        }
+        
+        img {
+            width: 100px;
+        }
+    }
+}
